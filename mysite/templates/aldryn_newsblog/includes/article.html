@@ -1,0 +1,148 @@
+{% load i18n staticfiles thumbnail cms_tags apphooks_config_tags sekizai_tags%}
+
+{% addtoblock "css" %}
+
+{% endaddtoblock %}
+
+<article class="article col-xs-12, col-sm-6, col-lg-4, img-responsive, thumb
+    {% if article.is_featured %} featured{% endif %}
+    {% if not article.published %} unpublished{% endif %}" xmlns="http://www.w3.org/1999/html">
+
+    <!--<hr>-->
+
+    {# The image is only shown on the detail view by using the condition "and detail_view" #}
+    {% if article.featured_image_id and detail_view %}
+        <div class="article_main_image visible_in_detail">
+            <img src="{% thumbnail article.featured_image 800x450 crop subject_location=article.featured_image.subject_location %}" alt="{{ article.featured_image.alt }}">
+        </div>
+    {% endif %}
+
+
+
+    <!-- Title as link -->
+    <div class="article_title">
+        <!--<h2>-->
+            {% if not detail_view %}
+                <a  class="photo-label" href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">{% render_model article "title" %}</a>
+            {% else %}
+                {% render_model article "title" %}
+            {% endif %}
+        <!--</h2>-->
+    </div>
+    <!-- Title as link -->
+
+
+
+    <!-- Content list_view -->
+    {% if list_view %}
+        {% render_placeholder article.content language placeholder_language %}
+    {% endif %}
+    <!-- Content list_view -->
+
+    <!-- Content detailed_view -->
+    {% if detail_view %}
+        {% render_placeholder article.content language placeholder_language %}
+    {% endif %}
+    <!-- Content detailed_view -->
+
+
+
+    <!--===== TRIP META INFO =====-->
+    <div class="trip_meta_info">
+
+        <!-- Title  -->
+        <div style="text-align: center; text-transform: uppercase;">
+            <h2>
+                {% if not detail_view %}
+                    <a href="{% namespace_url 'article-detail' article.slug namespace=namespace default='' %}">{% render_model article "title" %}</a>
+                {% else %}
+                    {% render_model article "title" %}
+                {% endif %}
+            </h2>
+        </div>
+        <!-- Title  -->
+
+        <hr>
+
+        <!--<hr>-->
+
+        <!-- Date  -->
+        <div class="trip_date">
+            {{ article.publishing_date|date }}
+        </div>
+        <!-- Date  -->
+
+        <!-- Author -->
+        <div class="article_author">
+            {% include "aldryn_newsblog/includes/author.html" with author=article.author %}
+        </div>
+        <!-- Author -->
+
+        <!--<br>-->
+        <!--<hr>-->
+
+        <!-- Lead-in -->
+        <div class="lead_in">
+            <br>
+            <p>
+                {% render_model article "lead_in" %}
+            </p>
+            <hr>
+        </div>
+        <!-- Lead-in -->
+
+        <!--<hr>-->
+
+
+
+        <!------------ Bottom article meta ------------>
+        <div class="bottom_article_meta">
+
+            <!-- Categories list -->
+            {% if article.categories.exists %}
+                <div class="cat_list">
+                    <p>
+                        <b>CATEGORIES: </b>
+                    </p>
+                    <ul>
+                        {% for category in article.categories.all %}
+                            <li>
+                                <a href="{% namespace_url 'article-list-by-category' category.slug namespace=namespace default='' %}">{{ category.name }}</a>
+                                {% if not forloop.last %}, {% endif %}
+                            </li>
+                                <!--<br>-->
+                        {% endfor %}
+
+                    </ul>
+
+                </div>
+            {% endif %}
+            <!-- Categories list -->
+
+
+            <!-- Tags -->
+            {% if article.tags %}
+                <div class="tag_list">
+                    <ul>
+                        {% for tag in article.tags.all %}
+                            <li>
+                                <a href="{% namespace_url 'article-list-by-tag' tag=tag.slug namespace=namespace default='' %}">{{ tag.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <!-- Tags -->
+
+
+        </div>
+        <!------------ Bottom article meta ------------>
+
+
+    </div>
+    <!--===== TRIP META INFO =====-->
+
+
+</article>
+
+<hr>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+
+
+    {% block content %}
+
+
+        {% placeholder "content" %}
+
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/trips.css" />
+
+        <!--<h1>Hello-->
+            <!--{% if request.user.is_authenticated %}-->
+                <!--{{ request.user.first_name }} {{ request.user.last_name}}-->
+            <!--{% else %}-->
+                <!--{{ instance.guest_name }}-->
+            <!--{% endif %}-->
+        <!--</h1>-->
+
+        <!--{{ instance }}-->
+
+        <!--{{ request.session }}-->
+
+
+    {% endblock content %}
+

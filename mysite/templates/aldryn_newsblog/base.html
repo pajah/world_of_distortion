@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load sekizai_tags %}
+
+
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/fullwidth.css" />
+
+
+{% block content %}
+
+    {% block newsblog_content %}
+        {# article_list.html and article_detail.html extend this template #}
+    {% endblock %}
+{% endblock content %}
+
+
+

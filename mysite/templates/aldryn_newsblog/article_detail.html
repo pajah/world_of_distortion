@@ -1,0 +1,60 @@
+{% extends "aldryn_newsblog/base.html" %}
+{% load i18n cms_tags apphooks_config_tags sekizai_tags %}
+
+
+{% block title %}
+    {{ article.title }} - {{ block.super }}
+{% endblock %}
+
+
+
+{% block newsblog_content %}
+
+
+
+<!--<script type='text/javascript'>-->
+<!--var a = 100;-->
+<!--var b = "Hello, world!";-->
+<!--console.log(b);-->
+<!--alert(a);-->
+<!--</script>-->
+
+
+
+    {% addtoblock "css" %}
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/article_detail.css" />
+    {% endaddtoblock %}
+
+    {% include "aldryn_newsblog/includes/article.html" with detail_view="true" %}
+
+
+    <!-- Prev & next articles block -->
+    <div class="prev_and_next_urls">
+        <!--<ul>-->
+            {% if prev_article %}
+                <!--<li>-->
+                    <a href="{{ prev_article.get_absolute_url }}">&larr; {% trans "Previous Article" %}</a>
+                <!--</li>-->
+            {% endif %}
+            <!--<li>-->
+                <a href="{% namespace_url "article-list" %}">{% trans "Back to Overview" %}</a>
+            <!--</li>-->
+            {% if next_article %}
+                <!--<li>-->
+                    <a href="{{ next_article.get_absolute_url }}">{% trans "Next Article" %} &rarr;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <!-- Prev & next articles block -->
+
+    <hr>
+
+
+    <div class="trips_footer">
+        {% static_placeholder "newsblog_social" %}
+    </div>
+
+{% endblock %}
+

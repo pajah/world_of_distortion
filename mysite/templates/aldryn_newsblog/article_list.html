@@ -1,0 +1,36 @@
+{% extends "aldryn_newsblog/base.html" %}
+{% load i18n sekizai_tags cms_tags %}
+
+
+{% block newsblog_content %}
+
+    {% addtoblock "css" %}
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/article_list.css" />
+    {% endaddtoblock %}
+
+
+    {% for article in article_list %}
+        {% include "aldryn_newsblog/includes/article.html" with list_view="true" %}
+    <!--<hr>-->
+    {% endfor %}
+
+    <!--<p>!@#!@#!@#!@#</p>-->
+
+
+    <div class="paginator">
+        {% include "aldryn_newsblog/includes/pagination.html" %}
+    </div>
+
+
+    <div class="trips_footer">
+        {% static_placeholder "newsblog_social" %}
+    </div>
+
+
+{% if user.is_authenticated %}
+!!!!!!!!!!!!!!!!!!!!
+{{ user.username }}
+{% endif %}
+
+{% endblock %}
+

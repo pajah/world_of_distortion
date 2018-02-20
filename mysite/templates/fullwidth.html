@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load cms_tags  %}
+{% load sekizai_tags  %}
+
+
+
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+
+{% block content %}
+
+
+<div class = 'hidden'>
+
+<!--WORKONG TAGS-->
+{% load page_tags %}
+{% include_page_tags request.current_page %}
+<br>
+{% include_title_tags request.current_page%}
+<br>
+{% page_tags request.current_page as tags %}
+<br>
+{{ tags }}
+<br>
+{% title_tags request.current_page as tags_title %}
+{{ tags_title}}
+<!--WORKONG TAGS-->
+</div>
+
+<p>++++++++++++++++++++++++++++++++</p>
+
+<!--{{ current_page.publication_date }}-->
+
+
+
+
+    {% placeholder "content" %}
+
+
+
+{% endblock content %}
+
+
+
+
+
+
