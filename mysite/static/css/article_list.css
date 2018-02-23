@@ -174,11 +174,6 @@ iframe {
 }
 
 
-.pan_article > .visible_in_list {
-    width: 67%;
-}
-
-
 .container p {
     padding-top: 0px;
 }
@@ -203,7 +198,7 @@ hr {
     display: inline-block;
     position: relative;
     float: left;
-    width: 33%;
+    width: 34%;
 }
 
 .article {
