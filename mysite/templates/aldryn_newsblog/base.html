@@ -1,9 +1,14 @@
 {% extends "base.html" %}
 
+{% load cms_tags  %}
 {% load sekizai_tags %}
 
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
-<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/fullwidth.css" />
+    {% addtoblock "css" %}
+        <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/fullwidth.css" />
+    {% endaddtoblock %}
+
 
 
 {% block content %}
