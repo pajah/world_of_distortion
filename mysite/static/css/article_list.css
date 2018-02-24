@@ -48,10 +48,10 @@ div[id^='gallery_'] {
     width: 34%;
 }
 
-iframe {
+section iframe {
     height: 400px;
     float: right;
-    width: 33%;
+    width: 34%;
 }
 
 
@@ -219,6 +219,14 @@ hr {
     text-transform: uppercase;
 }
 
+.article_row_map_left iframe {
+    float: left;
+    padding-left: 5px;
+
+}
+
+
+
 
 .photo-label {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -273,7 +281,7 @@ hr {
 }
 
 .global_tag_list {
-    width:  46%;
+    width:  50%;
 }
 
 .global_tag_list  b {
