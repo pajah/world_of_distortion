@@ -1,10 +1,17 @@
 {% load i18n %}
 
 {% if article %}
+    <hr>
+    <br>
+    <p align="center">
+        <b>RELATED POSTS: </b>
+    </p>
     <ul>
         {% for article in article_list %}
             <li>
-                <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
+                <!--<h3>-->
+                    <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                <!--</h3>-->
                 <p>{% trans "by" %} <a href="#">{{ article.author }}</a> {{ article.publishing_date|date }}</p>
             </li>
         {% empty %}

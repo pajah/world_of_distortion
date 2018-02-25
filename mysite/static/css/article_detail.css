@@ -102,6 +102,19 @@ section iframe {
 
 }
 
+.vis_in_detail_related_arts {
+    float: left;
+    margin-left: 20px !important;
+    text-align: left;
+    padding-top: 20px;
+    padding-right: 10px !important;
+
+}
+.vis_in_detail_related_arts ul {
+    list-style: square outside;
+    padding-left: 15px;
+}
+
 
 .global_cat_list {
 
@@ -162,7 +175,7 @@ hr {
     float: left;
 }
 
-.visible_in_detail {
+article .visible_in_detail {
     position: relative;
     float: left;
 
@@ -336,6 +349,8 @@ hr {
 
 .prev_and_next_urls {
     text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .prev_and_next_urls a {
@@ -439,11 +454,100 @@ left: 0;
 .background img{
 }
 
+
+
+/* DEVICES SETTINGS */
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
-.background {
-left: 50%;
-margin-left: -512px;   /* 50% */
-}
+    .background {
+        left: 50%;
+        margin-left: -512px;   /* 50% */
+    }
+
+    .article {
+        padding-right: 10px;
+    }
+
+    .h2 {
+        font-size: 20px;
+    }
+
+    .article_main_image img {
+        width: 420px;
+    }
+
+    .visible_in_list {
+        width: 100%;
+    }
+
+        .trip_meta_info {
+            width: 65%;
+            font-size: 10px;
+            padding: 5px;
+    }
+
+    .pan_article > .visible_in_list {
+        width: 100%;
+    }
+
+    .trip_meta_info {
+        width: 35%;
+        float: right;
+    }
+
+    pan_article trip_meta_info {
+        width: 100%;
+    }
+
+    .pan_article + .trip_meta_info {
+        width: 100%;
+    }
+
+    .trip_date {
+        float: left;
+        margin-right: 0;
+        font-style: italic;
+        font-size: 12px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        margin-top: 16px;
+    }
+
+    .article_author {
+        float: right;
+        margin-right: 0;
+        font-style: ;
+        font-size: 11px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        margin-top: 8px;
+    }
+
+    .article_author img{
+        height: 30px;
+        width: 30px;
+    }
+
+    .vis_in_detail_related_arts {
+        width: 35%;
+        margin-left: 0px !important;
+        float: right;
+        text-align: left;
+        padding-top: 20px;
+        font-size: 10px;
+    }
+
+    .vis_in_detail_related_arts ul {
+        list-style: square outside;
+        padding-left: 15px;
+    }
+
+    .trips_footer * {
+        font-size: 10px;
+
+        padding: 0px;
+        width: auto;
+    }
+
 }
 
 .error_404{
