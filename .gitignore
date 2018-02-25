@@ -3,3 +3,4 @@
 media
 *.db
 static
+mysite/settings.py
