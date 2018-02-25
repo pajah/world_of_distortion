@@ -122,7 +122,6 @@ section iframe {
 
 
 .global_cat_list {
-
     float: right;
     border-right: thin dashed;
     border-right-color: lightgrey;
@@ -277,7 +276,7 @@ hr {
     border:1px solid #000;
     background-color: #414040;
     margin: 2px;
-    text-transform: uppercase   ;
+    text-transform: uppercase;
 }
 
 .tag_list a {
@@ -309,7 +308,40 @@ hr {
     overflow:hidden;
 }
 
+.paginator {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    left: 42%;
+    padding: 10px;
+}
 
+.paginator li {
+/*
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline;
+    transition: lightgrey .3s;
+*/
+    color: gray;
+    float: left;
+    display:inline;
+    padding:.4em .6em .3em;
+    line-height:1;
+    text-align:center;
+    white-space:nowrap;
+    vertical-align:baseline;
+    border-radius:.25em;
+    border:1px dotted gray;
+    background-color: #e7e7e7;
+    margin: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+
+}
 
 
 
@@ -319,6 +351,16 @@ hr {
 
 }
 
+
+
+.search_results {
+    padding: 10px;
+}
+
+.search_results > hr {
+    padding-bottom: 20px;
+
+}
 
 
 
@@ -455,6 +497,14 @@ left: 0;
     .article_author img{
         height: 30px;
         width: 30px;
+    }
+
+    .trips_footer * {
+        font-size: 10px;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+        padding-left: 10px;
     }
 }
 

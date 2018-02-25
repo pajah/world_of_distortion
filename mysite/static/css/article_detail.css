@@ -159,6 +159,7 @@ section iframe {
 
 .container p {
     padding-top: 0px;
+    margin: 0 0 5px;
 }
 
 .container h2 {
@@ -196,6 +197,14 @@ article .visible_in_detail {
 .pan_article > .visible_in_detail {
     width: 100%;
     float: right;
+}
+
+.pan_article > .vis_in_detail_related_arts {
+
+}
+
+.pan_article  li * {
+    display: inline;
 }
 
 .panorama_row > .pan_images {
@@ -543,9 +552,10 @@ left: 0;
 
     .trips_footer * {
         font-size: 10px;
-
+        margin: 0px;
         padding: 0px;
         width: auto;
+        padding-left: 10px;
     }
 
 }

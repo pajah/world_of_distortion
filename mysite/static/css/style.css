@@ -98,6 +98,33 @@ background-color:blue;
     src: url("/static/photos/otf/Quicksand-Light.otf") format("opentype");
 }
 
+.search_form {
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.search_form input{
+    width: 150px;
+    background-image: url('/static/css/searchicon.png');
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    border: 1px dotted gray;
+}
+.search_form button{
+    background-color: #e7e7e7;
+    color: gray;
+    border: 1px dashed gray;
+}
+
+.search_form input[type=text]:focus {
+    border: 1px dashed;
+    border-color: lightgrey;
+
+}
+
+
+
 .text
 {
 z-index:100;

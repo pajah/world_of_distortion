@@ -195,6 +195,7 @@ INSTALLED_APPS = (
 LANGUAGES = (
     ## Customize this
     ('ru', gettext('ru')),
+    ('en', gettext('en')),
 )
 
 CMS_LANGUAGES = {
@@ -210,6 +211,13 @@ CMS_LANGUAGES = {
             'code': 'ru',
             'hide_untranslated': False,
             'name': gettext('ru'),
+            'redirect_on_fallback': True,
+        },
+        {
+            'public': True,
+            'code': 'en',
+            'hide_untranslated': False,
+            'name': gettext('en'),
             'redirect_on_fallback': True,
         },
     ],
@@ -301,3 +309,6 @@ SHOW_TOOLBAR_CALLBACK = show_toolbar
 INTERNAL_IPS = ('127.0.0.1', '195.242.151.18',)
 
 DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False,}
+
+
+# uwsgi --http :8080 --home /home/admin/Env/PHOTO --chdir /home/admin/PyProjects/world_of_distortion/ -w mysite.wsgi
