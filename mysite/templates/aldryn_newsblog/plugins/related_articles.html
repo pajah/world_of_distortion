@@ -10,7 +10,9 @@
         {% for article in article_list %}
             <li>
                 <!--<h3>-->
+                <b>
                     <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+                </b>
                 <!--</h3>-->
                 <p>{% trans "by" %} <a href="#">{{ article.author }}</a> {{ article.publishing_date|date }}</p>
             </li>
