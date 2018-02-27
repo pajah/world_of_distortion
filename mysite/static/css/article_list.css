@@ -48,6 +48,10 @@ div[id^='gallery_'] {
     width: 34%;
 }
 
+.ug-slider-wrapper {
+    background-color: white !important;
+}
+
 section iframe {
     height: 400px;
     float: right;
