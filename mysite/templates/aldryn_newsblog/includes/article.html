@@ -102,7 +102,11 @@
             {% if article.categories.exists %}
                 <div class="cat_list">
                     <p>
+                        {% if  current_language == "en" %}
                         <b>CATEGORIES: </b>
+                        {% else %}
+                        <b>КАТЕГОРИИ: </b>
+                        {% endif %}
                     </p>
                     <ul>
                         {% for category in article.categories.all %}
