@@ -29,23 +29,33 @@
 
 
     <!-- Prev & next articles block -->
-    <div class="prev_and_next_urls">
-        <!--<ul>-->
+    {% if  current_language == "en" %}
+        <div class="prev_and_next_urls">
             {% if prev_article %}
-                <!--<li>-->
-                    <a href="{{ prev_article.get_absolute_url }}">&larr; {% trans "Previous Article" %}</a>
-                <!--</li>-->
+                <a href="{{ prev_article.get_absolute_url }}">&larr; Previous Trip" %}</a>
             {% endif %}
-            <!--<li>-->
-                <a href="{% namespace_url "article-list" %}">{% trans "Back to Overview" %}</a>
-            <!--</li>-->
+                <a href="{% namespace_url "article-list" %}">Back to all Trips </a>
             {% if next_article %}
-                <!--<li>-->
-                    <a href="{{ next_article.get_absolute_url }}">{% trans "Next Article" %} &rarr;</a>
-            </li>
+                <a href="{{ next_article.get_absolute_url }}">Next Trip &rarr;</a>
             {% endif %}
-        </ul>
-    </div>
+        </div>
+    {% else %}
+        <div class="prev_and_next_urls">
+            {% if prev_article %}
+                <a href="{{ prev_article.get_absolute_url }}">&larr; Пердыдущая запись</a>
+            {% endif %}
+                <a href="{% namespace_url "article-list" %}">Ко всем записям</a>
+            {% if next_article %}
+                <a href="{{ next_article.get_absolute_url }}">Следующая запись &rarr;</a>
+            {% endif %}
+        </div>
+    {% endif %}
+
+
+
+
+
+
 
     <!-- Prev & next articles block -->
 

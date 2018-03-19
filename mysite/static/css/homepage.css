@@ -85,6 +85,12 @@ background-color:blue;
     left: 12px;
 }
 
+.homepage_pan {
+    margin-top: -10px;
+    float: left;
+    position: relative;
+}
+
 .container img:hover
 {
            opacity: 0.75;
