@@ -90,9 +90,6 @@ section iframe {
 
 }
 
-.h2 {
-    font-size: 250%;
-}
 
 .cat_list {
     float: left;
@@ -167,6 +164,7 @@ section iframe {
 
 .container h2 {
     padding-top: 0px;
+    font-size: 250%;
 }
 
 hr {
@@ -477,10 +475,6 @@ left: 0;
 
     .article {
         padding-right: 10px;
-    }
-
-    .h2 {
-        font-size: 20px;
     }
 
     .article_main_image img {
