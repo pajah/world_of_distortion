@@ -90,6 +90,9 @@ section iframe {
 
 }
 
+.h2 {
+    font-size: 250%;
+}
 
 .cat_list {
     float: left;
@@ -488,10 +491,10 @@ left: 0;
         width: 100%;
     }
 
-        .trip_meta_info {
-            width: 65%;
-            font-size: 10px;
-            padding: 5px;
+    .trip_meta_info {
+        width: 65%;
+        font-size: 10px;
+        padding: 5px;
     }
 
     .pan_article > .visible_in_list {
@@ -499,8 +502,16 @@ left: 0;
     }
 
     .trip_meta_info {
-        width: 35%;
+        width: 34%;
         float: right;
+    }
+
+    .bottom_article_meta {
+        weight: 34%;
+    }
+
+    .cat_list {
+        padding-top: 15px;
     }
 
     pan_article trip_meta_info {
@@ -537,7 +548,7 @@ left: 0;
     }
 
     .vis_in_detail_related_arts {
-        width: 35%;
+        width: 34%;
         margin-left: 0px !important;
         float: right;
         text-align: left;
@@ -552,10 +563,31 @@ left: 0;
 
     .trips_footer * {
         font-size: 10px;
-        margin: 0px;
-        padding: 0px;
+        padding-bottom: 3px;
         width: auto;
         padding-left: 10px;
+        text-align: left;
+    }
+
+    .trips_footer a {
+        font-size: 10px;
+        padding-left: 0px;
+    }
+
+    .trips_footer .tag_list {
+        font-size: 10px;
+        padding-left: 0px;
+        padding-right: 10px;
+    }
+
+    .trips_footer span {
+        font-size: 10px;
+        padding-left: 0px;
+    }
+
+    .prev_and_next_urls a {
+        font-size: 10px;
+        padding: 10px 1%;
     }
 
 }
