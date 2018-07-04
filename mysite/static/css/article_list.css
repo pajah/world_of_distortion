@@ -229,6 +229,8 @@ hr {
 .article_row_map_left iframe {
     float: left;
     padding-left: 25px;
+    background-color: white;
+    margin: 1px;
 
 }
 
