@@ -4,7 +4,11 @@
     <hr>
     <br>
     <p align="center">
-        <b>RELATED POSTS: </b>
+        {% if  current_language == "en" %}
+            <b>RELATED POSTS: </b>
+            {% else %}
+            <b>В ЭТОМ ЖЕ АЛЬБОМЕ: </b>
+        {% endif %}
     </p>
     <ul>
         {% for article in article_list %}
