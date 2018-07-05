@@ -32,11 +32,11 @@
     {% if  current_language == "en" %}
         <div class="prev_and_next_urls">
             {% if prev_article %}
-                <a href="{{ prev_article.get_absolute_url }}">&larr; Previous Trip" %}</a>
+                <a href="{{ prev_article.get_absolute_url }}">&larr; Previous Trip </a>
             {% endif %}
                 <a href="{% namespace_url "article-list" %}">Back to all Trips </a>
             {% if next_article %}
-                <a href="{{ next_article.get_absolute_url }}">Next Trip &rarr;</a>
+                <a href="{{ next_article.get_absolute_url }}">Next Trip &rarr; </a>
             {% endif %}
         </div>
     {% else %}
