@@ -31,9 +31,11 @@
     </div>
     <!-- Title as link -->
 
+    {% addtoblock "js" %}
     <script type="text/javascript">
         $('iframe').contents().find('body').css({'background-color': 'white'});
     </script>
+    {% endaddtoblock %}
 
     <!-- Content list_view -->
     {% if list_view %}
@@ -89,8 +91,8 @@
             <p>
                 {% render_model article "lead_in" %}
             </p>
-            <hr>
         </div>
+        <hr>
         <!-- Lead-in -->
 
         <!--<hr>-->

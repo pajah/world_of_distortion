@@ -5,30 +5,26 @@
 
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115831792-1"></script>
-        <script>
+        <script type="text/javascript">
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'UA-115831792-1');
         </script>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
 
         <title>{% block title %}{% endblock title %}</title>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="SHORTCUT ICON" href="{{ STATIC_URL }}media/favicon.ico" />
+        <link rel="SHORTCUT ICON" href="{{ MEDIA_URL }}/favicon.ico" />
         <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" />
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
         {% render_block "css" %}
 
-        <!-- Mailchimp -->
-        <script type="text/javascript" async src="https://downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"f04818d20ae949da5a78f0bb2","lid":"1cb6f95ab6"}) })</script>
-
-        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f04818d20ae949da5a78f0bb2/bc41e8d90ca831b7c1028a072.js");</script>
-        <!-- Mailchimp -->
 
     </head>
     <body>
@@ -92,9 +88,6 @@
         <!-- Top navigation -->
 
 
-        <!--<script src="{{ STATIC_URL }}js/jquery-1.11.0.min.js"></script>-->
-        <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
-
 
         <div class="container">
             <!--<ul class="nav">-->
@@ -103,6 +96,16 @@
             {% block content %}{% endblock content %}
         </div>
         <br>
+
+        <!-- Mailchimp -->
+        <script type="text/javascript" src="{{ STATIC_URL }}js/mailchimp_world_of_distortion.js"></script>
+        <!-- Mailchimp -->
+
+
+        <script>
+
+        </script>
         {% render_block "js" %}
+
     </body>
 </html>

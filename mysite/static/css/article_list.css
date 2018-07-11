@@ -81,6 +81,7 @@ section iframe {
     margin-left: 10px;
     margin-bottom: 20px;
     margin-top: 16px;
+    position: absolute;
 }
 
 .article_author {
@@ -106,7 +107,10 @@ section iframe {
     margin-top: 15px;
     text-align: left;
     float: initial;
-
+    max-height: 200px;
+    overflow: hidden;
+    text-align: justify;
+    width: 100%;
 }
 
 .bottom_article_meta {
