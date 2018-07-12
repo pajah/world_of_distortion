@@ -60,7 +60,7 @@ section iframe {
 
 
 .trip_meta_info {
-    width: 32%;
+    width: 33%;
     padding-left: 25px;
     float: left;
     padding-right: 15px;
@@ -90,10 +90,10 @@ section iframe {
     font-style: ;
     font-size: 14px;
     margin-left: 10px;
-    margin-bottom: 20px;
     margin-top: 1px;
 
     /*
+    margin-bottom: 20px;
     outline: thin auto;
     outline-offset: 13px;
     */
