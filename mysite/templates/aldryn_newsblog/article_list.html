@@ -33,5 +33,11 @@
 <!--{{ user.username }}-->
 <!--{% endif %}-->
 
+
+    {% addtoblock "js" %}
+        <script type="text/javascript" src="{{ STATIC_URL }}js/list_view_cover_img_urls.js"></script>
+    {% endaddtoblock %}
+
+
 {% endblock %}
 

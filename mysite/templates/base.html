@@ -97,14 +97,15 @@
         </div>
         <br>
 
+
+
+        {% addtoblock "js" %}
         <!-- Mailchimp -->
         <script type="text/javascript" src="{{ STATIC_URL }}js/mailchimp_world_of_distortion.js"></script>
         <!-- Mailchimp -->
+        {% endaddtoblock %}
 
 
-        <script>
-
-        </script>
         {% render_block "js" %}
 
     </body>
