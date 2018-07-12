@@ -113,6 +113,10 @@ section iframe {
     width: 100%;
 }
 
+.lead_in a{
+    color: #757575;
+}
+
 .bottom_article_meta {
     padding-top: 10px;
 }
@@ -134,7 +138,7 @@ section iframe {
     border-right: thin dashed;
     border-right-color: lightgrey;
     padding-right: 10px;
-    width: 50%;
+    width: 60%;
     text-align: right;
 }
 
@@ -235,6 +239,7 @@ hr {
     padding-left: 1px;
     background-color: white;
     margin: 1px;
+    width: 34% !important;
 
 }
 

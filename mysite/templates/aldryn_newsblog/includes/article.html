@@ -92,6 +92,10 @@
                 {% render_model article "lead_in" %}
             </p>
         </div>
+
+        {% addtoblock "js" %}
+            <script type="text/javascript" src="{{ STATIC_URL }}js/lead_in_wiki_urls.js"></script>
+        {% endaddtoblock %}
         <hr>
         <!-- Lead-in -->
 
@@ -149,7 +153,6 @@
 
     </div>
     <!--===== TRIP META INFO =====-->
-
 
 </article>
 
