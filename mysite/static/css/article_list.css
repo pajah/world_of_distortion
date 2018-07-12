@@ -60,12 +60,12 @@ section iframe {
 
 
 .trip_meta_info {
-    width: 33%;
-    padding-left: 25px;
+    width: 32%;
+    padding-left: 30px;
     float: left;
-    padding-right: 15px;
 
 /*
+    padding-right: 15px;
     width: 33%;
     col-xs-12, col-sm-6, col-lg-4, img-responsive, thumb
 */
