@@ -60,7 +60,7 @@ section iframe {
 
 
 .trip_meta_info {
-    width: 33%;
+    width: 32%;
     padding-left: 25px;
     float: left;
     padding-right: 15px;
@@ -232,7 +232,7 @@ hr {
 
 .article_row_map_left iframe {
     float: left;
-    padding-left: 25px;
+    padding-left: 1px;
     background-color: white;
     margin: 1px;
 
