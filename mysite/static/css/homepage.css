@@ -1,4 +1,16 @@
-body { 
+.container {
+    width: 100%;
+    padding: 0;
+}
+
+.homepage_pan {
+    position: relative;
+}
+
+
+
+/*
+body {
     padding-top: 50px;
 }
 
@@ -50,7 +62,7 @@ body {
 /*.container{*/
     /*margin: 0 auto 20px;*/
     /*overflow:hidden;*/
-/*}*/
+/*}
 
 .crop {
     overflow:hidden;
@@ -127,6 +139,10 @@ font-family: "Quicksand";
 font-weight: lighter;
 }
 
+*/
+
+
+/*
 .background {
 /* Set rules to fill background */
 min-height: 100%;
@@ -157,7 +173,7 @@ margin-left: -512px;   /* 50% */
 }
 
 .error_404{
-	text-align:center; 
-	margin-top:50px;
+    text-align:center;
+    margin-top:50px;
 }
- 
+
