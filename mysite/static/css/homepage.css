@@ -5,6 +5,7 @@
 
 .homepage_pan {
     position: relative;
+    float: left;
 }
 
 .container p {
