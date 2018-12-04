@@ -280,6 +280,7 @@ hr {
 .tag_list {
     float: right;
     text-align: right;
+    width: 65%;
 }
 
 .tag_list li {

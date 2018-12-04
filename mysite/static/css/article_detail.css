@@ -102,6 +102,7 @@ section iframe {
     float: left;
     margin-left: 30px;
     text-align: left;
+    width: 25%;
 }
 .cat_list ul {
     list-style: square outside;
@@ -313,6 +314,7 @@ article .visible_in_detail {
     float: right;
     margin-right: 20px;
     text-align: right;
+    width: 65%;
 }
 
 .tag_list li {
