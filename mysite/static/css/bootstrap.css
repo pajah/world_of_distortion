@@ -914,8 +914,8 @@ a {
 }
 a:hover,
 a:focus {
-  color: #690000b8;
   /*
+  color: #690000b8;
   outline: thin auto;
   outline-offset: 10px;
   text-decoration: underline;
