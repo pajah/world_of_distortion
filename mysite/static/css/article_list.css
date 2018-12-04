@@ -125,6 +125,7 @@ section iframe {
     float: left;
     margin-left: 20px;
     text-align: left;
+    margin-right
 }
 .cat_list ul {
     list-style: square outside;
