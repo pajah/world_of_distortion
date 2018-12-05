@@ -131,6 +131,7 @@ section iframe {
 
 .vis_in_detail_related_arts li {
     margin-left: 1%;
+    display: inline-grid;
 }
 
 
