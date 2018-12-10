@@ -52,6 +52,18 @@ div[id^='gallery_'] {
     background-color: white !important;
 }
 
+.article_row_map_left > iframe {
+    height: 400px;
+    float: right;
+    width: 35% !important;
+}
+
+.article_row > iframe {
+    height: 400px;
+    float: right;
+    width: 35% !important;
+}
+
 section iframe {
     height: 400px;
     float: right;
@@ -141,6 +153,7 @@ section iframe {
     padding-right: 10px;
     width: 60%;
     text-align: right;
+    margin-right: 18%;
 }
 
 .global_cat_list ul {
@@ -155,7 +168,6 @@ section iframe {
 }
 
 .global_social_links {
-    float: right;
     border-left: thin dashed;
     border-left-color: lightgrey;
     padding-left: 10px;
@@ -235,9 +247,7 @@ hr {
 
 .article_row_map_left iframe {
     float: left;
-    padding-left: 1px;
     background-color: white;
-    margin: 1px;
     width: 34% !important;
 }
 
@@ -285,16 +295,16 @@ hr {
 
 .tag_list li {
     float: right;
-    display:inline;
-    padding:.4em .6em .3em;
-    font-size:75%;
-    line-height:1;
-    color:#fff;
-    text-align:center;
-    white-space:nowrap;
-    vertical-align:baseline;
-    border-radius:.25em;
-    border:1px solid #000;
+    display: inline;
+    padding: .4em .6em .3em;
+    font-size: 75%;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    border: 1px solid #000;
     background-color: #414040;
     margin: 2px;
     text-transform: uppercase;
@@ -305,7 +315,29 @@ hr {
 }
 
 .global_tag_list {
-    width:  80%;
+    width:  100%;
+    text-align: center;
+}
+
+.global_tag_list li {
+    float: left;
+    display: inline;
+    padding: .4em .6em .3em;
+    font-size: 75%;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    border: 1px solid #000;
+    background-color: #414040;
+    margin: 2px;
+    text-transform: uppercase;
+}
+
+.global_tag_list ul {
+    margin-left: 5%
 }
 
 .global_tag_list  b {
@@ -365,6 +397,84 @@ hr {
 }
 
 
+#disqus_panel {
+    display: inline-block;
+    width: 37%;
+    height: 100px;
+    top: 43%;
+    right: -35%;
+    position: fixed;
+    z-index: 4;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: up right 0.5s linear;
+}
+
+#disqus_panel > img {
+    bottom: 1px;
+    position: relative;
+    bottom: -47%;
+}
+
+#disqus_thread {
+    background: #e7e7e7;
+    padding: 10px;
+    border: dashed 1px gray;
+}
+
+#disqus_panel > span {
+    text-align: center;
+    display: block;
+    height: 32px;
+    width: 94%;
+    line-height: 1.2em;
+    border-right: 1px solid #fff;
+    float: right;
+    position: relative;
+    top: 0;
+    right: 0;
+    color:#fff;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+   #disqus_panel > div{
+       display: block;
+       float: left;
+       color:#fff;
+       font-size: 45px;
+       padding: 5px 13px;
+   }
+        #disqus_panel:hover,
+        #disqus_panel:focus{
+            text-decoration: none;
+            opacity: 1;
+        }
+        #disqus_panel.visible {
+            right: 0;
+            visibility: visible;
+            opacity: 0.9;
+            height: 80%;
+            top: 10%;
+            overflow: auto;
+        }
+
+    #disqus_panel > .btn {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      margin: 10px 0 0 20px;
+    }
+
+    .btn + label {
+      position: relative;
+      padding: 0 0 0 60px;
+      cursor: pointer;
+    }
+    .btn + label:before {
+      content: '';
+        }
 
 .trips_footer {
     margin-top: 20px;

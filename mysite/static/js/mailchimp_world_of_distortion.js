@@ -15,7 +15,7 @@ chimpPopup.appendChild(document.createTextNode('require(["mojo/signup-forms/Load
 jQuery(function ($) {
     document.body.appendChild(chimpPopupLoader);
 
-    $(window).load(function () {
+    $(window).on('load', function () {
         document.body.appendChild(chimpPopup);
     });
 

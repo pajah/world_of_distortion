@@ -109,6 +109,10 @@
         <!-- Mailchimp -->
         {% endaddtoblock %}
 
+        {% addtoblock "js" %}
+        <script type="text/javascript" src="{{ STATIC_URL }}js/disqus_panel.js"></script>
+        {% endaddtoblock %}
+
 
         {% render_block "js" %}
 
