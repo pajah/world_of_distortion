@@ -247,7 +247,6 @@ article .visible_in_detail {
 #disqus_panel > span {
     text-align: center;
     display: block;
-    height: 32px;
     width: 94%;
     line-height: 1.2em;
     border-right: 1px solid #fff;
